@@ -1,0 +1,115 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f9; /* optional for clearer effect */
+}
+
+/* Navigation */
+nav {
+    background-color: navy;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 50px;
+    align-items: center;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    color: lightblue;
+}
+
+/* Header / Hero Section */
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 60px;
+    min-height: 80vh;
+    background-color: #f4f6f9;
+}
+
+.hero-text {
+    width: 50%;
+}
+
+.hero-image img {
+    width: 200px;
+    border-radius: 50%;
+}
+
+/* Sections */
+section {
+    padding: 60px;
+    max-width: 900px;
+    margin: auto;
+}
+
+h2 {
+    margin-bottom: 20px;
+    color: navy;
+}
+
+/* Cards */
+.card {
+    background-color: #f4f6f9;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: navy;
+    color: white;
+}
+
+/* Responsive for mobile */
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-text, .hero-image {
+        width: 100%;
+    }
+
+    .hero-image img {
+        width: 150px;
+        margin-top: 20px;
+    }
+
+    nav {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 10px;
+    }
+}
+
