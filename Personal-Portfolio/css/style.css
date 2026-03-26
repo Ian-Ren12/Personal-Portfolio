@@ -1,0 +1,266 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    margin: 0;
+    background: linear-gradient(to top, #f4f6f9, #e9eef5);
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+}
+.shape {
+    position: absolute;
+    border-radius: 50%;
+    opacity: 0.2;
+    animation: float 6s infinite ease-in-out;
+}
+
+.shape:nth-child(1) {
+    width: 120px;
+    height: 120px;
+    background: navy;
+    top: 20%;
+    left: 10%;
+}
+
+.shape:nth-child(2) {
+    width: 80px;
+    height: 80px;
+    background: skyblue;
+    top: 60%;
+    left: 70%;
+}
+
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+    100% { transform: translateY(0px); }
+}
+
+/* NAVBAR */
+nav {
+    background: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 60px;
+    align-items: center;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+}
+
+nav .logo {
+    font-size: 20px;
+    color: navy;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+}
+
+nav ul li a:hover {
+    color: navy;
+}
+
+/* HERO (FIGMA STYLE) */
+.hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 90vh;
+    padding: 80px 20px;
+    background: linear-gradient(135deg, #f4f6f9, #e9eef5);
+    gap: 25px;
+}
+
+.hero-text h2 {
+    font-size: 42px;
+    color: navy;
+}
+
+.hero-text p {
+    font-size: 18px;
+    color: #555;
+}
+
+.hero-image img {
+    width: 450px;
+    height: 450px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid white;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+/* SECTIONS */
+section {
+    padding: 80px 20px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+h2 {
+    color: navy;
+    margin-bottom: 20px;
+}
+
+/* CARDS */
+.card {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+    transition: 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: navy;
+    color: white;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+
+    nav {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-text h2 {
+        font-size: 30px;
+    }
+
+    .hero-image img {
+        width: 130px;
+        height: 130px;
+    }
+/* WAVE BACKGROUND */
+.wave-container {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 150px;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.waves {
+    position: relative;
+    width: 200%;
+    height: 100%;
+}
+
+/* Wave animations */
+.wave1 use {
+    animation: moveWave 10s linear infinite;
+}
+
+.wave2 use {
+    animation: moveWave 15s linear infinite;
+    opacity: 0.7;
+}
+
+.wave3 use {
+    animation: moveWave 20s linear infinite;
+    opacity: 0.5;
+}
+
+@keyframes moveWave {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+	/* hidden by default */
+.fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease;
+}
+
+/* visible state */
+.fade-in.show {
+    opacity: 1;
+    transform: translateY(0);
+.fade-in {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 1s ease;
+/* WAVE CONTAINER */
+.wave-container {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 120px;
+    overflow: hidden;
+    z-index: -1;
+}
+
+/* SVG SIZE */
+.waves {
+    width: 200%;
+    height: 100%;
+}
+
+/* ANIMATION */
+.wave {
+    position: absolute;
+    width: 200%;
+    height: 100%;
+}
+
+/* different speeds */
+.wave1 use {
+    animation: moveWave 10s linear infinite;
+}
+
+.wave2 use {
+    animation: moveWave 15s linear infinite;
+    opacity: 0.7;
+}
+
+.wave3 use {
+    animation: moveWave 20s linear infinite;
+    opacity: 0.5;
+}
+
+/* movement */
+@keyframes moveWave {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+
+}
